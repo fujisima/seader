@@ -1,3 +1,12 @@
+#' Read municipal live births dataset
+#'
+#' @param year Integer year to filter (optional).
+#' @param as_data_frame Logical. Return data.frame if TRUE.
+#' @param showProgress Logical. Show download progress.
+#' @param cache Logical. Use cached file if TRUE.
+#'
+#' @export
+
 read_birth <- function(
     year = NULL,
     as_data_frame = FALSE,
