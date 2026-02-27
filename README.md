@@ -33,7 +33,7 @@ remotes::install_github("fujisima/seader")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This example demonstrates how to access birth data:
 
 ``` r
 library(seader)
@@ -47,8 +47,10 @@ library(dplyr)
 #> 
 #>     intersect, setdiff, setequal, union
 
-df_nascidosvivos <- seader::read_birth(year=2025)
-query <- df_nascidosvivos |> filter(cod_ibge == 3550308) 
+nascidosvivos <- read_birth(year = 2025)
+
+# 3550308 corresponds to the municipality of São Paulo
+query <- nascidosvivos |> filter(cod_ibge == 3550308) 
 query |> collect()
 #>   cod_ibge  ano masculino feminino ignorado nascidosvivos
 #> 1  3550308 2025    57.178   54.853        0       112.033
