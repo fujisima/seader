@@ -27,8 +27,8 @@ You can install the development version of seader from
 [GitHub](https://github.com/) with:
 
 ``` r
-install.packages("pak")
-pak::pak("fujisima/seader")
+install.packages("remotes")
+remotes::install_github("fujisima/seader")
 ```
 
 ## Example
