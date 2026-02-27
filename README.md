@@ -7,13 +7,19 @@
 
 <!-- badges: end -->
 
-The goal of seader is to …
+Infraestrutura de dados municipais versionados para análise demográfica
+e social no Brasil.
 
-- Ideias de funções:
-  - Função para realizar o download das bases da Fundação Seade
-    (nascimentos)
-  - Função para realizar o download dos dicionários de dados das
-    respectivas bases
+O pacote **seader** fornece funções para acessar bases públicas
+consolidadas e versionadas, publicadas no repositório
+[`seader-data`](https://github.com/fujisima/seader-data).
+
+Atualmente disponível:
+
+- 📊 Nascidos vivos por sexo (2019–2025)
+- Unidade de análise: Município (código IBGE)
+- Formato: Parquet
+- Acesso lazy via Arrow
 
 ## Installation
 
@@ -21,7 +27,7 @@ You can install the development version of seader from
 [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("pak")
+install.packages("pak")
 pak::pak("fujisima/seader")
 ```
 
@@ -30,28 +36,17 @@ pak::pak("fujisima/seader")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-#library(seader)
-## basic example code
+library(seader)
+library(dplyr)
+#> 
+#> Anexando pacote: 'dplyr'
+#> Os seguintes objetos são mascarados por 'package:stats':
+#> 
+#>     filter, lag
+#> Os seguintes objetos são mascarados por 'package:base':
+#> 
+#>     intersect, setdiff, setequal, union
+
+df_nascidosvivos <- seader::read_birth(year=2025)
+df_nascidosvivos <- df_nascidosvivos |> collect()
 ```
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
