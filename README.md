@@ -48,5 +48,8 @@ library(dplyr)
 #>     intersect, setdiff, setequal, union
 
 df_nascidosvivos <- seader::read_birth(year=2025)
-df_nascidosvivos <- df_nascidosvivos |> collect()
+query <- df_nascidosvivos |> filter(cod_ibge == 3550308) 
+query |> collect()
+#>   cod_ibge  ano masculino feminino ignorado nascidosvivos
+#> 1  3550308 2025    57.178   54.853        0       112.033
 ```
