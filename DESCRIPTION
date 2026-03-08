@@ -1,6 +1,6 @@
 Package: seader
 Title: Access Public Data from Fundação SEADE
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: 
     person("Leonardo", "Fujisima", email = "leonardo@fujisimaanalytics.com", role = c("aut", "cre"))
 Description: Provides tools to access public datasets from Fundação SEADE,
