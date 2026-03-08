@@ -14,7 +14,7 @@ read_birth_mother_age <- function(
     cache = TRUE
 ) {
 
-  url <- "https://github.com/fujisima/seader-data/releases/download/birth-mother-age/nascidosvivos-idade-2000-2010-2023-2024-2025.parquet"
+  url <- "https://github.com/fujisima/seader-data/releases/download/birth-age/nascidosvivos-idade-2000-2010-2023-2024-2025.parquet"
 
   .read_seader_dataset(
     url = url,
