@@ -18,16 +18,17 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-Infraestrutura de dados municipais versionados para análise demográfica e social no Brasil.
+Versioned municipal data infrastructure for demographic and social analysis in Brazil.
 
-O pacote **seader** fornece funções para acessar bases públicas consolidadas e versionadas, publicadas no repositório [`seader-data`](https://github.com/fujisima/seader-data).
+The **seader** package provides functions to access consolidated and versioned public datasets for Brazilian municipalities.
+The datasets are published and maintained in the [`seader-data`](https://github.com/fujisima/seader-data) repository.
 
-Atualmente disponível:
+Currently available:
 
-- 📊 Nascidos vivos por sexo (2019–2025)
-- Unidade de análise: Município (código IBGE)
-- Formato: Parquet
-- Acesso lazy via Arrow
+- 📊 Live births by sex (2019–2025)
+- Unit of analysis: Municipality (IBGE code)
+- Format: Parquet
+- Lazy access via Arrow
 
 ## Installation
 
