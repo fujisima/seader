@@ -16,6 +16,8 @@ test_that("read_birth_sex returns Arrow query by default", {
 
 test_that("read_birth_sex returns data.frame when requested", {
 
+  skip_on_cran()
+
   df <- read_birth_sex(year = 2025, as_data_frame = TRUE)
 
   expect_true(is.data.frame(df))
@@ -23,6 +25,8 @@ test_that("read_birth_sex returns data.frame when requested", {
 })
 
 test_that("read_birth_sex can be filtered with dplyr", {
+
+  skip_on_cran()
 
   df <- read_birth_sex(year = 2025) |>
     filter(cod_ibge == 3550308) |>
@@ -35,6 +39,7 @@ test_that("read_birth_sex can be filtered with dplyr", {
 test_that("read_birth_sex returns data", {
 
   skip_if_offline()
+  skip_on_cran()
 
   df <- read_birth_sex(year = 2025, as_data_frame = TRUE)
 
@@ -56,6 +61,8 @@ test_that("read_birth_mother_age returns Arrow query by default", {
 
 test_that("read_birth_mother_age returns data.frame when requested", {
 
+  skip_on_cran()
+
   df <- read_birth_mother_age(year = 2025, as_data_frame = TRUE)
 
   expect_true(is.data.frame(df))
@@ -63,6 +70,8 @@ test_that("read_birth_mother_age returns data.frame when requested", {
 })
 
 test_that("read_birth_mother_age can be filtered with dplyr", {
+
+  skip_on_cran()
 
   df <- read_birth_mother_age(year = 2025) |>
     filter(cod_ibge == 3550308) |>
@@ -75,6 +84,7 @@ test_that("read_birth_mother_age can be filtered with dplyr", {
 test_that("read_birth_mother_age returns data", {
 
   skip_if_offline()
+  skip_on_cran()
 
   df <- read_birth_mother_age(year = 2025, as_data_frame = TRUE)
 
