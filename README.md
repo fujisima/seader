@@ -48,7 +48,7 @@ library(dplyr)
 #> 
 #>     intersect, setdiff, setequal, union
 
-nascidosvivos <- read_birth(year = 2025)
+nascidosvivos <- read_birth_sex(year = 2025)
 
 # 3550308 corresponds to the municipality of São Paulo
 query <- nascidosvivos |> filter(cod_ibge == 3550308) 

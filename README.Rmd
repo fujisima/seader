@@ -11,6 +11,9 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+
+# load package from source when building README
+devtools::load_all()
 ```
 
 # seader
@@ -47,7 +50,7 @@ This example demonstrates how to access birth data:
 library(seader)
 library(dplyr)
 
-nascidosvivos <- read_birth(year = 2025)
+nascidosvivos <- read_birth_sex(year = 2025)
 
 # 3550308 corresponds to the municipality of São Paulo
 query <- nascidosvivos |> filter(cod_ibge == 3550308) 
