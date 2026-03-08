@@ -1,0 +1,65 @@
+# -----------------------------
+
+# Default behavior
+
+# -----------------------------
+
+* text=auto eol=lf
+
+# -----------------------------
+
+# R files
+
+# -----------------------------
+
+*.R text eol=lf
+*.Rmd text eol=lf
+*.Rproj text eol=lf
+
+# -----------------------------
+
+# Documentation
+
+# -----------------------------
+
+*.md text eol=lf
+*.txt text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+
+# -----------------------------
+
+# Data files
+
+# -----------------------------
+
+*.csv text eol=lf
+
+# Binary data formats (no diff)
+
+*.parquet binary
+*.feather binary
+*.rds binary
+*.rda binary
+
+# -----------------------------
+
+# Images
+
+# -----------------------------
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+
+# -----------------------------
+
+# Archives
+
+# -----------------------------
+
+*.zip binary
+*.tar binary
+*.gz binary
