@@ -70,3 +70,9 @@ query_2 |> collect()
 #> 3 2025  3550308  30 a 39          46497
 #> 4 2025  3550308  40 a 49           6657
 ```
+
+## Disclaimer
+
+This package is not affiliated with, endorsed by, or maintained by
+Fundação SEADE. It simply provides convenient access to publicly
+available SEADE datasets.

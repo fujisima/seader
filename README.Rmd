@@ -67,3 +67,8 @@ query_2 |> collect()
 
 ```
 
+## Disclaimer
+
+This package is not affiliated with, endorsed by, or maintained by
+Fundação SEADE. It simply provides convenient access to publicly
+available SEADE datasets.

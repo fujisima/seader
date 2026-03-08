@@ -1,12 +1,13 @@
 Package: seader
 Title: Access Public Data from Fundação SEADE
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
-    person("Leonardo", "Yada", email = "leonardo@fujisimaanalytics.com", role = c("aut", "cre"))
+    person("Leonardo", "Fujisima", email = "leonardo@fujisimaanalytics.com", role = c("aut", "cre"))
 Description: Provides tools to access public datasets from Fundação SEADE,
     including vital statistics such as births. The package connects to
     externally stored datasets and returns Arrow datasets that can be
-    queried lazily using dplyr.
+    queried lazily using dplyr. This package is not affiliated with,
+    endorsed by, or maintained by Fundação SEADE.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
