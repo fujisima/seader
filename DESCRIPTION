@@ -4,11 +4,11 @@ Version: 0.1.3
 Authors@R: 
     person("Leonardo", "Fujisima", email = "leonardo@fujisimaanalytics.com", role = c("aut", "cre"))
 Description: Provides tools to access public datasets from the São Paulo State
-Data Analysis System Foundation (Fundação SEADE), including vital
-statistics such as births. The package connects to externally stored
-datasets and returns Arrow datasets that can be queried lazily using
-'dplyr'. This package is not affiliated with, endorsed by, or maintained
-by Fundação SEADE.
+    Data Analysis System Foundation (Fundação SEADE), including vital
+    statistics such as births. The package connects to externally stored
+    datasets and returns Arrow datasets that can be queried lazily using
+    'dplyr'. This package is not affiliated with, endorsed by, or maintained
+    by Fundação SEADE.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
