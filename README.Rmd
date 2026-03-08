@@ -50,10 +50,17 @@ This example demonstrates how to access birth data:
 library(seader)
 library(dplyr)
 
-nascidosvivos <- read_birth_sex(year = 2025)
+nascidosvivos_sexo <- read_birth_sex(year = 2025)
 
 # 3550308 corresponds to the municipality of São Paulo
-query <- nascidosvivos |> filter(cod_ibge == 3550308) 
-query |> collect()
+query_1 <- nascidosvivos_sexo |> filter(cod_ibge == 3550308) 
+query_1 |> collect()
+
+nascidosvivos_idade <- read_birth_mother_age(year = 2025)
+
+# 3550308 corresponds to the municipality of São Paulo
+query_2 <- nascidosvivos_idade |> filter(cod_ibge == 3550308) 
+query_2 |> collect()
+
 ```
 

@@ -14,11 +14,11 @@ read_birth_sex <- function(
     cache = TRUE
 ) {
 
-  url <- "https://github.com/fujisima/seader-data/releases/download/birth-sex/nascidosvivos-sexo-2019-2025.parquet"
+  url <- paste0(SEADER_BASE_URL, "birth-sex.parquet")
 
   .read_seader_dataset(
     url = url,
-    filename = "nascidosvivos-sexo-2019-2025.parquet",
+    filename = "birth-sex.parquet",
     year = year,
     as_data_frame = as_data_frame,
     showProgress = showProgress,

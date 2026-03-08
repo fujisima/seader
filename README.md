@@ -48,11 +48,22 @@ library(dplyr)
 #> 
 #>     intersect, setdiff, setequal, union
 
-nascidosvivos <- read_birth_sex(year = 2025)
+nascidosvivos_sexo <- read_birth_sex(year = 2025)
 
 # 3550308 corresponds to the municipality of São Paulo
-query <- nascidosvivos |> filter(cod_ibge == 3550308) 
-query |> collect()
-#>   cod_ibge  ano masculino feminino ignorado nascidosvivos
-#> 1  3550308 2025    57.178   54.853        0       112.033
+query_1 <- nascidosvivos_sexo |> filter(cod_ibge == 3550308) 
+query_1 |> collect()
+#>   cod_ibge  ano masculino feminino ignorado nascidos_vivos
+#> 1  3550308 2025    57.178   54.853        0         112033
+
+nascidosvivos_idade <- read_birth_mother_age(year = 2025)
+
+# 3550308 corresponds to the municipality of São Paulo
+query_2 <- nascidosvivos_idade |> filter(cod_ibge == 3550308) 
+query_2 |> collect()
+#>    ano cod_ibge    idade nascidos_vivos
+#> 1 2025  3550308 Menos 20           7584
+#> 2 2025  3550308  20 a 29          51133
+#> 3 2025  3550308  30 a 39          46497
+#> 4 2025  3550308  40 a 49           6657
 ```
