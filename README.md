@@ -17,7 +17,8 @@ published and maintained in the
 
 Currently available:
 
-- 📊 Live births by sex (2019–2025)
+- Live births by sex (2019–2025)
+- Live births by mother’s age (2000, 2010, 2023-2025)
 - Unit of analysis: Municipality (IBGE code)
 - Format: Parquet
 - Lazy access via Arrow
