@@ -1,17 +1,24 @@
+# seader 0.1.4
+
+* Fixed CRAN policy issue: replaced use of `~/.seader` with
+  `tools::R_user_dir("seader", "cache")` for user cache directories.
+
+# seader 0.1.3
+
+* Updated DESCRIPTION to quote software package names (e.g., 'dplyr')
+  and clarify the reference to Fundação SEADE as requested during
+  CRAN review.
+
 # seader 0.1.2
 
-* Adjusted tests for CRAN compatibility when using Arrow-backed datasets.
-* Tests that materialize Arrow datasets are now skipped on CRAN to avoid
-  failures caused by codec availability in the CRAN build environment.
+* Minor improvements and adjustments following CRAN checks.
 
 # seader 0.1.1
 
-* Initial CRAN submission.
+* Internal improvements and documentation updates.
 
 # seader 0.1.0
 
-* First public version of the package.
-* Functions to access SEADE vital statistics data:
-  - `read_birth_sex()`
-  - `read_birth_mother_age()`
-* Arrow-backed datasets enabling lazy queries with `dplyr`.
+* Initial release.
+* Functions to access selected public datasets from Fundação SEADE.
+* Lazy access to Arrow datasets.

@@ -11,10 +11,17 @@
     stop("Package 'arrow' is required. Install it with install.packages('arrow').", call. = FALSE)
   }
 
-  cache_dir <- path.expand("~/.seader")
-  if (!dir.exists(cache_dir)) dir.create(cache_dir, recursive = TRUE)
+  cache_dir <- tools::R_user_dir("seader", which = "cache")
 
-  dest <- file.path(cache_dir, filename)
+  if (isTRUE(cache) && !dir.exists(cache_dir)) {
+    dir.create(cache_dir, recursive = TRUE, showWarnings = FALSE)
+  }
+
+  dest <- if (isTRUE(cache)) {
+    file.path(cache_dir, filename)
+  } else {
+    tempfile(fileext = ".parquet")
+  }
 
   if (!isTRUE(cache) || !file.exists(dest)) {
 
